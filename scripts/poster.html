@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Hanken+Grotesk:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1280px; height: 800px; }
+  body {
+    display: grid; place-items: center;
+    font-family: "Hanken Grotesk", sans-serif;
+    color: #ece9f5; overflow: hidden; position: relative;
+    background:
+      radial-gradient(900px 600px at 78% 8%, color-mix(in srgb, var(--a) 30%, transparent) 0%, transparent 60%),
+      radial-gradient(700px 500px at 12% 100%, #161a2e 0%, transparent 55%),
+      linear-gradient(160deg, #0c0c14 0%, #08080d 100%);
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 54px 54px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 20%, transparent 78%);
+  }
+  .scan {
+    position: absolute; inset: 0; opacity: .5; mix-blend-mode: multiply;
+    background: repeating-linear-gradient(180deg, transparent 0 2px, rgba(0,0,0,.18) 3px, transparent 4px);
+  }
+  .wrap { position: relative; text-align: center; padding: 0 90px; max-width: 1040px; }
+  .emoji { font-size: 110px; line-height: 1; filter: drop-shadow(0 12px 40px color-mix(in srgb, var(--a) 60%, transparent)); }
+  .kicker {
+    font-family: "Space Mono", monospace; text-transform: uppercase;
+    letter-spacing: .34em; font-size: 17px; color: var(--a);
+    margin: 30px 0 16px;
+  }
+  h1 {
+    font-family: "Syne", sans-serif; font-weight: 800;
+    font-size: 96px; line-height: .94; letter-spacing: -.035em;
+    background: linear-gradient(180deg, #fff, color-mix(in srgb, var(--a) 35%, #c9c5e0));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  p { margin: 26px auto 0; font-size: 26px; color: #b6b3cc; max-width: 760px; line-height: 1.45; }
+  .host {
+    position: absolute; bottom: 54px; left: 0; right: 0; text-align: center;
+    font-family: "Space Mono", monospace; font-size: 18px; color: #6b6886;
+  }
+  .host::before { content: "↗ "; color: var(--a); }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="scan"></div>
+  <div class="wrap">
+    <div class="emoji" id="emoji"></div>
+    <div class="kicker" id="kicker"></div>
+    <h1 id="title"></h1>
+    <p id="pitch"></p>
+  </div>
+  <div class="host" id="host"></div>
+  <script>
+    const q = new URLSearchParams(location.search);
+    document.documentElement.style.setProperty("--a", q.get("a") || "#36e0c0");
+    document.getElementById("emoji").textContent = q.get("e") || "✦";
+    document.getElementById("kicker").textContent = q.get("k") || "";
+    document.getElementById("title").textContent = q.get("t") || "";
+    document.getElementById("pitch").textContent = q.get("p") || "";
+    document.getElementById("host").textContent = q.get("h") || "";
+  </script>
+</body>
+</html>

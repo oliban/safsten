@@ -1,0 +1,15 @@
+{
+  "name": "safsten-hub",
+  "version": "1.0.0",
+  "description": "safsten.fly.dev — live projects hub",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "shoot": "node scripts/shoot.mjs",
+    "statuses": "node scripts/statuses.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SÄFSTEN ARCADE</title>
+  <meta name="description" content="Everything Fredrik Säfsten has shipped — games, calculators, apps and experiments. Insert coin." />
+  <meta property="og:title" content="SÄFSTEN ARCADE" />
+  <meta property="og:description" content="Everything I've shipped — insert a coin and play." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Syne:wght@600;700;800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🕹️&lt;/text&gt;&lt;/svg&gt;" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+    <div class="bg-glow bg-glow--3"></div>
+    <div class="bg-scan"></div>
+    <div class="bg-vignette"></div>
+    <div class="bg-noise"></div>
+  </div>
+
+  <header class="marquee">
+    <div class="marquee-inner">
+      <h1 class="wordmark">SÄFSTEN <em>ARCADE</em></h1>
+      <p class="tag">Every game, calculator &amp; app I've shipped — under one neon sign. Drop a coin and play.</p>
+      <div class="credits">
+        <span class="credit-chip" id="live-count">●&nbsp;— ONLINE</span>
+        <span class="credit-chip credit-chip--ghost" id="total-count">— CABINETS</span>
+      </div>
+    </div>
+    <div class="pellets" aria-hidden="true"></div>
+    <span class="ghost ghost--1" aria-hidden="true"></span>
+    <span class="ghost ghost--2" aria-hidden="true"></span>
+    <span class="ghost ghost--3" aria-hidden="true"></span>
+    <span class="pac" aria-hidden="true"></span>
+  </header>
+
+  <section id="hero" class="cabinet" aria-label="Featured project">
+    <p class="loading">warming up the cabinet…</p>
+  </section>
+
+  <main id="app"></main>
+
+  <footer class="foot">
+    <span class="foot-mark">SÄFSTEN ARCADE</span>
+    <span class="foot-sep">·</span>
+    <span>safsten.fly.dev</span>
+    <span class="foot-sep">·</span>
+    <a href="https://github.com/oliban" target="_blank" rel="noopener">github.com/oliban</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
