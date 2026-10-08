@@ -338,6 +338,8 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 70px; }
 .foot-mark { font-family: var(--arcade); font-size: .6rem; color: var(--amber); }
 .foot a:hover { color: var(--amber); }
 .foot-sep { opacity: .4; }
+.foot-quote { flex-basis: 100%; margin: 14px 0 0; font-style: italic; font-size: .85rem; color: var(--muted); }
+.foot-quote cite { font-style: normal; color: var(--amber); margin-left: 6px; }
 
 @media (max-width: 760px) {
   .cab-body { grid-template-columns: 1fr; }
