@@ -63,15 +63,6 @@
     "flyApp": "peace-shuttle"
   },
   {
-    "id": "worldcup-game",
-    "title": "World Cup Predictor",
-    "url": "https://worldcup-game.fly.dev",
-    "category": "games",
-    "pitch": "A 2026 FIFA World Cup prediction pool — predict scores & scorers and compete on an auto-graded leaderboard.",
-    "screenshot": "screenshots/worldcup-game.png",
-    "flyApp": "worldcup-game"
-  },
-  {
     "id": "fishy-business-game",
     "title": "Fishy Business",
     "url": "https://fishy-business-game.fly.dev",
@@ -178,5 +169,14 @@
     "pitch": "A satirical generator that turns declassified Epstein documents into shareable Christmas cards.",
     "screenshot": "screenshots/epstein-xmas.png",
     "flyApp": "epstein-xmas"
+  },
+  {
+    "id": "worldcup-game",
+    "title": "World Cup Predictor",
+    "url": "https://worldcup-game.fly.dev",
+    "category": "misc",
+    "pitch": "A 2026 FIFA World Cup prediction pool — predict scores & scorers and compete on an auto-graded leaderboard.",
+    "screenshot": "screenshots/worldcup-game.png",
+    "flyApp": "worldcup-game"
   }
 ]
