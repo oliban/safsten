@@ -72,6 +72,24 @@
     "flyApp": "worldcup-game"
   },
   {
+    "id": "fishy-business-game",
+    "title": "Fishy Business",
+    "url": "https://fishy-business-game.fly.dev",
+    "category": "games",
+    "pitch": "An underwater eat-or-be-eaten arcade game — pick your fish, outswim sharks, anglerfish and torpedoes, solo or 2-player.",
+    "screenshot": "screenshots/fishy-business-game.png",
+    "flyApp": "fishy-business-game"
+  },
+  {
+    "id": "mario-game",
+    "title": "Super Mario",
+    "url": "https://mario-game.fly.dev",
+    "category": "games",
+    "pitch": "An original-art homage to the 1985 platformer — every sprite, tile and note authored in vanilla JS. Keyboard or on-screen joypad.",
+    "screenshot": "screenshots/mario-game.png",
+    "flyApp": "mario-game"
+  },
+  {
     "id": "skullking-calculator",
     "title": "Skull King Calculator",
     "url": "https://oliban.github.io/skullking-calculator/",
@@ -88,6 +106,15 @@
     "pitch": "A per-round score calculator for the card game Flip 7 — tap each player's kept cards and track totals to the win target.",
     "screenshot": "screenshots/flip7-calculator.png",
     "flyApp": "flip7-calculator"
+  },
+  {
+    "id": "golftally",
+    "title": "Golf Scorecard",
+    "url": "https://golftally.fly.dev",
+    "category": "calculators",
+    "pitch": "An offline-first golf scorecard PWA — hole-by-hole scores with live handicap-based Stableford points and a leaderboard.",
+    "screenshot": "screenshots/golftally.png",
+    "flyApp": "golftally"
   },
   {
     "id": "brainrot-skolan",
@@ -124,6 +151,24 @@
     "pitch": "An interactive drift-wave turbulence webapp — academic companion to Weiland & Rafiq (2026).",
     "screenshot": "screenshots/weiland-rafiq-companion.png",
     "flyApp": "weiland-rafiq-companion"
+  },
+  {
+    "id": "indiana-golf",
+    "title": "Indiana Golf",
+    "url": "https://indiana-golf.fly.dev",
+    "category": "apps",
+    "pitch": "Your golf history as a movie — log in with Golf-ID and a red line traces your rounds across an aged map, with scores and your own photos.",
+    "screenshot": "screenshots/indiana-golf.png",
+    "flyApp": "indiana-golf"
+  },
+  {
+    "id": "toptracer",
+    "title": "Toptracer Range Analyzer",
+    "url": "https://toptracer.fly.dev",
+    "category": "apps",
+    "pitch": "Log in with your Toptracer Range account and get club gapping, dispersion and consistency charts with a clean-hit filter.",
+    "screenshot": "screenshots/toptracer.png",
+    "flyApp": "toptracer"
   },
   {
     "id": "epstein-xmas",
