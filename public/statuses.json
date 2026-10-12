@@ -1,12 +1,12 @@
 {
   "flappy-math": "suspended",
   "fake-artist": "suspended",
+  "puerto-banana": "suspended",
   "naval-warfare": "suspended",
   "jetlag-game": "suspended",
   "church-smasher": "suspended",
   "mixtape-duel": "suspended",
   "peace-shuttle": "suspended",
-  "worldcup-game": "deployed",
   "fishy-business-game": "suspended",
   "mario-game": "suspended",
   "flip7-calculator": "suspended",
@@ -17,5 +17,6 @@
   "weiland-rafiq-companion": "suspended",
   "indiana-golf": "suspended",
   "toptracer": "suspended",
-  "epstein-xmas": "suspended"
+  "epstein-xmas": "suspended",
+  "worldcup-game": "deployed"
 }

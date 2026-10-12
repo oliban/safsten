@@ -18,6 +18,15 @@
     "flyApp": "fake-artist"
   },
   {
+    "id": "puerto-banana",
+    "title": "Puerto Banana",
+    "url": "https://puerto-banana.fly.dev",
+    "category": "games",
+    "pitch": "Blind-bid banana auction for 2-6 friends on their phones: win the cargo, pay the runner-up the gap, first to 200 bananas wins.",
+    "screenshot": "screenshots/puerto-banana.png",
+    "flyApp": "puerto-banana"
+  },
+  {
     "id": "naval-warfare",
     "title": "Naval Warfare",
     "url": "https://naval-warfare.fly.dev",
