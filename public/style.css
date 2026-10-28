@@ -307,6 +307,11 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 70px; }
 .card-title { font-family: "Syne", sans-serif; font-weight: 700; font-size: 1.22rem;
   letter-spacing: -.01em; margin: 0 0 8px; }
 .card-pitch { margin: 0; color: var(--muted); font-size: .93rem; flex: 1; }
+.tags { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tags li { font-family: "Space Mono", monospace; font-size: .68rem; color: var(--text);
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border-radius: 999px; padding: 2px 9px; }
 
 /* coin row at the bottom of each card */
 .coinrow { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line);
@@ -331,6 +336,16 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 70px; }
 @keyframes nudge { 25% { transform: translateX(-2px); } 75% { transform: translateX(2px); } }
 .card.inserting .coin-cta { color: var(--live); }
 
+.credit-chip[hidden] { display: none; }
+
+/* ---------- Language switch ---------- */
+.lang-switch { position: absolute; top: 66px; right: 24px; z-index: 5; display: flex;
+  border: 1px solid var(--line); border-radius: 999px; overflow: hidden;
+  font-family: var(--arcade); font-size: .55rem; background: rgba(7, 7, 12, .7); }
+.lang-switch a { padding: 8px 10px; color: var(--faint); }
+.lang-switch a:hover { color: var(--text); }
+.lang-switch a.is-active { background: var(--amber); color: var(--ink); }
+
 /* ---------- Footer ---------- */
 .foot { max-width: var(--maxw); margin: 0 auto; padding: 28px 24px 56px; border-top: 1px solid var(--line);
   font-family: "Space Mono", monospace; font-size: .74rem; color: var(--faint);
@@ -338,6 +353,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 24px 70px; }
 .foot-mark { font-family: var(--arcade); font-size: .6rem; color: var(--amber); }
 .foot a:hover { color: var(--amber); }
 .foot-sep { opacity: .4; }
+.foot-more { margin-left: auto; font-family: var(--arcade); font-size: .6rem; color: var(--amber);
+  border: 1px solid var(--amber); border-radius: 999px; padding: 10px 14px; }
+.foot-more:hover { background: var(--amber); color: var(--ink) !important; }
 .foot-quote { flex-basis: 100%; margin: 14px 0 0; font-style: italic; font-size: .85rem; color: var(--muted); }
 .foot-quote cite { font-style: normal; color: var(--amber); margin-left: 6px; }
 

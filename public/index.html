@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SÄFSTEN ARCADE</title>
-  <meta name="description" content="Everything Fredrik Säfsten has shipped — games, calculators, apps and experiments. Insert coin." />
+  <meta name="description" content="Alla spel Fredrik Säfsten har byggt. Stoppa i ett mynt." />
   <meta property="og:title" content="SÄFSTEN ARCADE" />
-  <meta property="og:description" content="Everything I've shipped — insert a coin and play." />
+  <meta property="og:description" content="Alla spel Fredrik Säfsten har byggt. Stoppa i ett mynt." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Syne:wght@600;700;800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -24,10 +24,14 @@
     <div class="bg-noise"></div>
   </div>
 
+  <nav class="lang-switch" aria-label="Språk / Language">
+    <a href="?lang=sv" data-lang="sv" hreflang="sv">SV</a><a href="?lang=en" data-lang="en" hreflang="en">EN</a>
+  </nav>
+
   <header class="marquee">
     <div class="marquee-inner">
       <h1 class="wordmark">SÄFSTEN <em>ARCADE</em></h1>
-      <p class="tag">Every game, calculator &amp; app I've shipped — under one neon sign. Drop a coin and play.</p>
+      <p class="tag" data-i18n="tag">Alla spel jag har byggt — under samma neonskylt. Stoppa i ett mynt och spela.</p>
       <div class="credits">
         <span class="credit-chip" id="live-count">●&nbsp;— ONLINE</span>
         <span class="credit-chip credit-chip--ghost" id="total-count">— CABINETS</span>
@@ -41,7 +45,7 @@
   </header>
 
   <section id="hero" class="cabinet" aria-label="Featured project">
-    <p class="loading">warming up the cabinet…</p>
+    <p class="loading" data-i18n="loading">värmer upp spelautomaten…</p>
   </section>
 
   <main id="app"></main>
@@ -52,9 +56,11 @@
     <span>safsten.fly.dev</span>
     <span class="foot-sep">·</span>
     <a href="https://github.com/oliban" target="_blank" rel="noopener">github.com/oliban</a>
-    <blockquote class="foot-quote">“This is actually my resume of sorts of play projects I made with AI” <cite>— Fredrik Säfsten</cite></blockquote>
+    <a class="foot-more" href="projects" data-i18n="more">Inte så mycket för spel? Kolla in mina andra projekt ▸</a>
+    <blockquote class="foot-quote" data-i18n="quote">”Detta är ett slags CV över projekt jag lekt ihop med AI” <cite>— Fredrik Säfsten</cite></blockquote>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

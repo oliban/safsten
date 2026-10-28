@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(resolve(__dirname, "public")));
+app.use(express.static(resolve(__dirname, "public"), { extensions: ["html"] }));
 
 // --- Live status ---
 // Served from public/statuses.json, a snapshot baked at deploy time by

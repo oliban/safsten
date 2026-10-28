@@ -4,7 +4,11 @@
     "title": "Flappy Math",
     "url": "https://flappy-math.fly.dev",
     "category": "games",
+    "shelf": "education",
+    "tags": ["1 player", "Maths practice"],
+    "tags_sv": ["1 spelare", "Mattenträning"],
     "pitch": "Flappy Bird for multiplication tables — fly through the pipes by picking the right answer.",
+    "pitch_sv": "Flappy Bird för multiplikationstabellen — flyg genom rören genom att välja rätt svar.",
     "screenshot": "screenshots/flappy-math.png",
     "flyApp": "flappy-math"
   },
@@ -13,7 +17,11 @@
     "title": "Fake Artist",
     "url": "https://fake-artist.fly.dev",
     "category": "games",
+    "shelf": "friends",
+    "tags": ["Group game"],
+    "tags_sv": ["Gruppspel"],
     "pitch": "Web version of the party game A Fake Artist Goes to New York — everyone draws, one player is faking it.",
+    "pitch_sv": "Webbversion av sällskapsspelet A Fake Artist Goes to New York — alla ritar, men en av er bluffar.",
     "screenshot": "screenshots/fake-artist.png",
     "flyApp": "fake-artist"
   },
@@ -22,7 +30,11 @@
     "title": "Puerto Banana",
     "url": "https://puerto-banana.fly.dev",
     "category": "games",
+    "shelf": "friends",
+    "tags": ["2–6 players"],
+    "tags_sv": ["2–6 spelare"],
     "pitch": "Blind-bid banana auction for 2-6 friends on their phones: win the cargo, pay the runner-up the gap, first to 200 bananas wins.",
+    "pitch_sv": "Blind budgivning på bananer för 2–6 kompisar i mobilen: vinn lasten, betala mellanskillnaden till tvåan, först till 200 bananer vinner.",
     "screenshot": "screenshots/puerto-banana.png",
     "flyApp": "puerto-banana"
   },
@@ -31,7 +43,11 @@
     "title": "Naval Warfare",
     "url": "https://naval-warfare.fly.dev",
     "category": "games",
+    "shelf": "friends",
+    "tags": ["2 players", "More complicated"],
+    "tags_sv": ["2 spelare", "Lite mer avancerat"],
     "pitch": "Classic Battleship, online — call your shots and sink the fleet.",
+    "pitch_sv": "Klassiskt sänka skepp, online — välj var du skjuter och sänk flottan.",
     "screenshot": "screenshots/naval-warfare.png",
     "flyApp": "naval-warfare"
   },
@@ -40,7 +56,11 @@
     "title": "Jet Lag: Hide & Seek",
     "url": "https://jetlag-game.fly.dev",
     "category": "games",
+    "shelf": "gamenight",
+    "tags": ["Group game", "More complicated"],
+    "tags_sv": ["Gruppspel", "Lite mer avancerat"],
     "pitch": "A digital companion for the hide-and-seek party game — draw cards, track the chase.",
+    "pitch_sv": "En digital kompanjon till kurragömmaspelet — dra kort och håll koll på jakten.",
     "screenshot": "screenshots/jetlag-game.png",
     "flyApp": "jetlag-game"
   },
@@ -49,7 +69,11 @@
     "title": "Church Smasher",
     "url": "https://church-smasher.fly.dev",
     "category": "games",
+    "shelf": "solo",
+    "tags": ["1 player"],
+    "tags_sv": ["1 spelare"],
     "pitch": "A daily image-guessing game — smash a stained-glass window to reveal the photo and guess it in as few hits as possible.",
+    "pitch_sv": "Ett dagligt bildgissningsspel — krossa ett kyrkfönster för att avslöja bilden och gissa den på så få slag som möjligt.",
     "screenshot": "screenshots/church-smasher.png",
     "flyApp": "church-smasher"
   },
@@ -58,7 +82,11 @@
     "title": "Mixtape Duel",
     "url": "https://mixtape-duel.fly.dev",
     "category": "games",
+    "shelf": "friends",
+    "tags": ["2 players", "Needs Spotify"],
+    "tags_sv": ["2 spelare", "Kräver Spotify"],
     "pitch": "A 2-team Spotify music quiz — race to name songs from any playlist, built for tablets.",
+    "pitch_sv": "Ett musikquiz med Spotify för två lag — tävla om att känna igen låtar från vilken spellista som helst, gjort för surfplattor.",
     "screenshot": "screenshots/mixtape-duel.png",
     "flyApp": "mixtape-duel"
   },
@@ -67,7 +95,11 @@
     "title": "Peace Shuttle",
     "url": "https://peace-shuttle.fly.dev",
     "category": "games",
+    "shelf": "solo",
+    "tags": ["1 player"],
+    "tags_sv": ["1 spelare"],
     "pitch": "A satirical Lunar Lander — pilot Trumpleton's Peace Shuttle from DC to Russia, dodging hazards and minding your fuel.",
+    "pitch_sv": "En satirisk Lunar Lander — styr Trumpletons fredsskyttel från DC till Ryssland, undvik faror och håll koll på bränslet.",
     "screenshot": "screenshots/peace-shuttle.png",
     "flyApp": "peace-shuttle"
   },
@@ -76,7 +108,11 @@
     "title": "Fishy Business",
     "url": "https://fishy-business-game.fly.dev",
     "category": "games",
+    "shelf": "solo",
+    "tags": ["1–2 players"],
+    "tags_sv": ["1–2 spelare"],
     "pitch": "An underwater eat-or-be-eaten arcade game — pick your fish, outswim sharks, anglerfish and torpedoes, solo or 2-player.",
+    "pitch_sv": "Ett arkadspel under vattnet där du äter eller blir uppäten — välj din fisk och simma undan hajar, marulkar och torpeder, ensam eller två spelare.",
     "screenshot": "screenshots/fishy-business-game.png",
     "flyApp": "fishy-business-game"
   },
@@ -85,7 +121,11 @@
     "title": "Super Mario",
     "url": "https://mario-game.fly.dev",
     "category": "games",
+    "shelf": "solo",
+    "tags": ["1 player"],
+    "tags_sv": ["1 spelare"],
     "pitch": "An original-art homage to the 1985 platformer — every sprite, tile and note authored in vanilla JS. Keyboard or on-screen joypad.",
+    "pitch_sv": "En hyllning till plattformsspelet från 1985 med helt egen grafik — varje figur, ruta och ton skapad i ren JavaScript. Tangentbord eller styrkors på skärmen.",
     "screenshot": "screenshots/mario-game.png",
     "flyApp": "mario-game"
   },
@@ -95,6 +135,7 @@
     "url": "https://oliban.github.io/skullking-calculator/",
     "category": "calculators",
     "pitch": "A fast score calculator for the Skull King card game — tally bids, tricks and bonuses each round.",
+    "pitch_sv": "En snabb poängräknare för kortspelet Skull King — räkna bud, stick och bonusar varje runda.",
     "screenshot": "screenshots/skullking-calculator.png",
     "flyApp": null
   },
@@ -104,6 +145,7 @@
     "url": "https://flip7-calculator.fly.dev",
     "category": "calculators",
     "pitch": "A per-round score calculator for the card game Flip 7 — tap each player's kept cards and track totals to the win target.",
+    "pitch_sv": "En poängräknare för kortspelet Flip 7 — tryck på varje spelares sparade kort och följ totalen mot målpoängen.",
     "screenshot": "screenshots/flip7-calculator.png",
     "flyApp": "flip7-calculator"
   },
@@ -113,6 +155,7 @@
     "url": "https://golftally.fly.dev",
     "category": "calculators",
     "pitch": "An offline-first golf scorecard PWA — hole-by-hole scores with live handicap-based Stableford points and a leaderboard.",
+    "pitch_sv": "Ett golfscorekort som fungerar offline — slag för slag per hål med Stablefordpoäng utifrån handicap i realtid och en topplista.",
     "screenshot": "screenshots/golftally.png",
     "flyApp": "golftally"
   },
@@ -122,6 +165,7 @@
     "url": "https://brainrot-skolan.fly.dev",
     "category": "apps",
     "pitch": "A gamified kids' education portal — Swedish LGR22 math & reading practice with a collectible reward system.",
+    "pitch_sv": "En spelifierad lärportal för barn — träna matte och läsning enligt Lgr22 med ett belöningssystem att samla på.",
     "screenshot": "screenshots/brainrot-skolan.png",
     "flyApp": "brainrot-skolan"
   },
@@ -131,6 +175,7 @@
     "url": "https://sketchnotes.fly.dev",
     "category": "apps",
     "pitch": "A note-taking app pairing a live markdown editor with a canvas sketchpad — all auto-saved.",
+    "pitch_sv": "En anteckningsapp som kombinerar en markdown-editor med en skissyta — allt sparas automatiskt.",
     "screenshot": "screenshots/sketchnotes.png",
     "flyApp": "sketchnotes"
   },
@@ -140,6 +185,7 @@
     "url": "https://eurotrip.fly.dev",
     "category": "apps",
     "pitch": "A conversational European road-trip planner — chat with Claude to build an itinerary shown live on Mapbox.",
+    "pitch_sv": "En roadtrip-planerare för Europa — chatta med Claude och bygg en resplan som visas direkt på kartan.",
     "screenshot": "screenshots/eurotrip.png",
     "flyApp": "eurotrip"
   },
@@ -149,6 +195,7 @@
     "url": "https://weiland-rafiq-companion.fly.dev",
     "category": "apps",
     "pitch": "An interactive drift-wave turbulence webapp — academic companion to Weiland & Rafiq (2026).",
+    "pitch_sv": "En interaktiv webbapp om driftvågsturbulens — akademisk följeslagare till Weiland & Rafiq (2026).",
     "screenshot": "screenshots/weiland-rafiq-companion.png",
     "flyApp": "weiland-rafiq-companion"
   },
@@ -158,6 +205,7 @@
     "url": "https://indiana-golf.fly.dev",
     "category": "apps",
     "pitch": "Your golf history as a movie — log in with Golf-ID and a red line traces your rounds across an aged map, with scores and your own photos.",
+    "pitch_sv": "Din golfhistoria som en film — logga in med Golf-ID så spårar en röd linje dina rundor över en gammal karta, med resultat och dina egna bilder.",
     "screenshot": "screenshots/indiana-golf.png",
     "flyApp": "indiana-golf"
   },
@@ -167,6 +215,7 @@
     "url": "https://toptracer.fly.dev",
     "category": "apps",
     "pitch": "Log in with your Toptracer Range account and get club gapping, dispersion and consistency charts with a clean-hit filter.",
+    "pitch_sv": "Logga in med ditt Toptracer Range-konto och få diagram över klubbavstånd, spridning och jämnhet, med filter för rena träffar.",
     "screenshot": "screenshots/toptracer.png",
     "flyApp": "toptracer"
   },
@@ -176,6 +225,7 @@
     "url": "https://epstein-xmas.fly.dev",
     "category": "misc",
     "pitch": "A satirical generator that turns declassified Epstein documents into shareable Christmas cards.",
+    "pitch_sv": "En satirisk generator som gör om avhemligade Epstein-dokument till julkort att dela.",
     "screenshot": "screenshots/epstein-xmas.png",
     "flyApp": "epstein-xmas"
   },
@@ -185,6 +235,7 @@
     "url": "https://worldcup-game.fly.dev",
     "category": "misc",
     "pitch": "A 2026 FIFA World Cup prediction pool — predict scores & scorers and compete on an auto-graded leaderboard.",
+    "pitch_sv": "Tipspool för fotbolls-VM 2026 — tippa resultat och målskyttar och tävla på en topplista som rättas automatiskt.",
     "screenshot": "screenshots/worldcup-game.png",
     "flyApp": "worldcup-game"
   }

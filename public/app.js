@@ -17,18 +17,58 @@ function makePellets() {
   wrap.innerHTML = html;
 }
 
+const STRINGS = {
+  sv: {
+    description: "Alla spel Fredrik Säfsten har byggt. Stoppa i ett mynt.",
+    tag: "Alla spel jag har byggt — under samma neonskylt. Stoppa i ett mynt och spela.",
+    loading: "värmer upp spelautomaten…",
+    loadError: "Kunde inte ladda arkaden.",
+    more: "Inte så mycket för spel? Kolla in mina andra projekt ▸",
+    quote: "”Detta är ett slags CV över projekt jag lekt ihop med AI” <cite>— Fredrik Säfsten</cite>",
+    nowPlaying: "spelas nu",
+    shuffle: "🎲 slumpa automat",
+    insertCoin: "stoppa i mynt",
+    live: "online",
+    sleep: "sover · stoppa i mynt",
+    ready: "redo",
+    online: (n) => `● ${n} online`,
+    cabinets: (n) => `${n} ${n === 1 ? "automat" : "automater"}`,
+    shelves: { solo: "Snabba enspelarspel", friends: "Spela med kompisar", gamenight: "För spelkvällar", education: "Utbildning" },
+  },
+  en: {
+    description: "Every game Fredrik Säfsten has shipped. Insert coin.",
+    tag: "Every game I've shipped — under one neon sign. Drop a coin and play.",
+    loading: "warming up the cabinet…",
+    loadError: "Couldn't load the arcade.",
+    more: "Not a gamer? See my other projects ▸",
+    quote: "“This is actually my resume of sorts of play projects I made with AI” <cite>— Fredrik Säfsten</cite>",
+    nowPlaying: "now playing",
+    shuffle: "🎲 shuffle cabinet",
+    insertCoin: "insert coin",
+    live: "online",
+    sleep: "asleep · insert coin",
+    ready: "ready",
+    online: (n) => `● ${n} online`,
+    cabinets: (n) => `${n} ${n === 1 ? "cabinet" : "cabinets"}`,
+    shelves: { solo: "Quick solo games", friends: "Play with friends", gamenight: "For game nights", education: "Education" },
+  },
+};
+const T = applyStrings(STRINGS);
+
+// The arcade only shows games; each game's `shelf` in projects.json picks its section.
+// Everything else lives on the portfolio page (projects.html).
 const SECTIONS = [
-  { key: "games", label: "Games", emoji: "🕹️", accent: "var(--games)" },
-  { key: "calculators", label: "Calculators", emoji: "🧮", accent: "var(--calc)" },
-  { key: "apps", label: "Apps & Tools", emoji: "🛠️", accent: "var(--apps)" },
-  { key: "misc", label: "Misc & Mischief", emoji: "🎭", accent: "var(--misc)" },
-];
+  { key: "solo", emoji: "🕹️", accent: "var(--games)" },
+  { key: "friends", emoji: "👥", accent: "var(--apps)" },
+  { key: "gamenight", emoji: "🧭", accent: "var(--misc)" },
+  { key: "education", emoji: "🧮", accent: "var(--calc)" },
+].map((s) => ({ ...s, label: T.shelves[s.key] }));
 const SECMAP = Object.fromEntries(SECTIONS.map((s) => [s.key, s]));
 
 const STATE_META = {
-  live: { cls: "is-live", label: "online" },
-  sleep: { cls: "is-sleep", label: "asleep · insert coin" },
-  unknown: { cls: "", label: "ready" },
+  live: { cls: "is-live", label: T.live },
+  sleep: { cls: "is-sleep", label: T.sleep },
+  unknown: { cls: "", label: T.ready },
 };
 
 const hostOf = (url) => { try { return new URL(url).host.replace(/^www\./, ""); } catch { return url; } };
@@ -66,6 +106,11 @@ function onCoinClick(el, url) {
   };
 }
 
+const tagsHTML = (p) => {
+  const tags = loc(p, "tags");
+  return tags?.length ? `<ul class="tags">${tags.map((t) => `<li>${t}</li>`).join("")}</ul>` : "";
+};
+
 const badge = (state) => `<span class="status-badge"><span class="dot"></span>${STATE_META[state].label}</span>`;
 
 /* ---------- Featured cabinet ---------- */
@@ -75,14 +120,14 @@ let featuredId = null;
 
 function renderHero(p) {
   const hero = document.getElementById("hero");
-  const sec = SECMAP[p.category];
+  const sec = SECMAP[p.shelf];
   const state = liveness(p, statusMap);
   const letter = (p.title[0] || "?").toUpperCase();
   hero.innerHTML = `
     <div class="cab ${STATE_META[state].cls}" style="--accent:${sec.accent}">
       <div class="cab-top">
-        <span class="now">now playing</span>
-        <button class="shuffle" id="shuffle" type="button">🎲 shuffle cabinet</button>
+        <span class="now">${T.nowPlaying}</span>
+        <button class="shuffle" id="shuffle" type="button">${T.shuffle}</button>
       </div>
       <div class="cab-body">
         <div class="cab-screen" data-letter="${letter}">
@@ -93,10 +138,11 @@ function renderHero(p) {
         <div class="cab-info">
           <span class="cat-chip">${sec.emoji} ${sec.label}</span>
           <h2 class="feat-title">${p.title}</h2>
-          <p class="feat-pitch">${p.pitch}</p>
+          <p class="feat-pitch">${loc(p, "pitch")}</p>
+          ${tagsHTML(p)}
           <div class="feat-foot">
             <a class="coin-btn" id="hero-coin" href="${p.url}" target="_blank" rel="noopener" role="button">
-              <span class="slot"><span class="coin"></span></span> insert coin
+              <span class="slot"><span class="coin"></span></span> ${T.insertCoin}
             </a>
             <span class="feat-host">${hostOf(p.url)}</span>
           </div>
@@ -116,7 +162,7 @@ function renderHero(p) {
 
 /* ---------- Card grid ---------- */
 function cardHTML(p, index) {
-  const sec = SECMAP[p.category];
+  const sec = SECMAP[p.shelf];
   const state = liveness(p, statusMap);
   const letter = (p.title[0] || "?").toUpperCase();
   return `
@@ -129,10 +175,11 @@ function cardHTML(p, index) {
       </div>
       <div class="card-body">
         <h3 class="card-title">${p.title}</h3>
-        <p class="card-pitch">${p.pitch}</p>
+        <p class="card-pitch">${loc(p, "pitch")}</p>
+        ${tagsHTML(p)}
         <div class="coinrow">
           <span class="card-host">${hostOf(p.url)}</span>
-          <span class="coin-cta"><span class="slot"><span class="coin"></span></span>insert coin<span class="arrow">▸</span></span>
+          <span class="coin-cta"><span class="slot"><span class="coin"></span></span>${T.insertCoin}<span class="arrow">▸</span></span>
         </div>
       </div>
     </a>`;
@@ -142,14 +189,14 @@ function renderSections() {
   const app = document.getElementById("app");
   let i = 0;
   app.innerHTML = SECTIONS.map((sec) => {
-    const items = projects.filter((p) => p.category === sec.key);
+    const items = projects.filter((p) => p.shelf === sec.key);
     if (!items.length) return "";
     const cards = items.map((p) => cardHTML(p, i++)).join("");
     return `
       <section class="section">
         <div class="section-head">
           <span class="section-tag" style="--accent:${sec.accent}">${sec.emoji} ${sec.label}</span>
-          <span class="section-count">${items.length} ${items.length === 1 ? "cabinet" : "cabinets"}</span>
+          <span class="section-count">${T.cabinets(items.length)}</span>
         </div>
         <div class="grid">${cards}</div>
       </section>`;
@@ -164,17 +211,22 @@ async function main() {
   makePellets();
   try {
     [projects, statusMap] = await Promise.all([
-      fetch("projects.json").then((r) => r.json()),
+      fetch("projects.json").then((r) => r.json())
+        .then((all) => all.filter((p) => p.category === "games" && SECMAP[p.shelf])),
       fetch("api/status").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
     ]);
   } catch {
-    document.getElementById("app").innerHTML = `<p class="loading">Couldn't load the arcade.</p>`;
+    document.getElementById("app").innerHTML = `<p class="loading">${T.loadError}</p>`;
     return;
   }
 
   const liveN = projects.filter((p) => liveness(p, statusMap) === "live").length;
-  document.getElementById("live-count").textContent = `● ${liveN} online`;
-  document.getElementById("total-count").textContent = `${projects.length} cabinets`;
+  // Every game sleeps until someone visits, so "0 online" would make the arcade look
+  // switched off; hide the chip instead.
+  const liveChip = document.getElementById("live-count");
+  if (liveN) liveChip.textContent = T.online(liveN);
+  else liveChip.hidden = true;
+  document.getElementById("total-count").textContent = T.cabinets(projects.length);
 
   featuredId = projects[Math.floor(Math.random() * projects.length)].id;
   renderHero(projects.find((p) => p.id === featuredId));
